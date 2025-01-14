@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Setup Instructions
 
-Currently, two official plugins are available:
+Follow these steps to set up the project locally:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone the repository:
 
-## Expanding the ESLint configuration
+   ```bash
+   git clone <repository-url>
+   
+2. Navigate to the project directory:   
+   ```bash
+   cd <project-directory>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. Install dependencies using pnpm:
+   ```bash
+   pnpm install
+   
+4. Start the development server:
+   ```bash
+     Start the development server:
+## Technology Choices and Rationale
 
-- Configure the top-level `parserOptions` property like this:
+- **Vite**: Chosen for its blazing-fast development environment and optimized build process.
+- **React**: Used for building the user interface due to its component-based architecture and widespread adoption.
+- **TypeScript**: Ensures type safety and improves developer productivity by catching errors during development.
+- **Tailwind CSS**: Simplifies styling with utility-first CSS classes, enabling rapid UI development.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Custom Implementation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- The drag-and-drop functionality was built entirely without using external libraries. This decision was made to maintain control over the implementation and minimize dependencies.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Known Limitations / Trade-offs
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **No Database Connection**: Currently, the project does not include a connected database. As a result, all data handling is limited to in-memory state management.
+- **No Debouncing**: The drag-and-drop feature does not have debouncing implemented. This could lead to performance issues if integrated with a database in the future.
+
+## Future Improvements
+
+- **Database Integration**: Connect the project to a database for persistent data storage.
+- **Add Debouncing**: Implement debouncing to optimize performance during high-frequency events, such as drag-and-drop interactions with database calls.
+
+
