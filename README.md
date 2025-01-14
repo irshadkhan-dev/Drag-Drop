@@ -1,4 +1,4 @@
-# Project Name
+# Drag && Drop
 
 ## Setup Instructions
 
@@ -7,7 +7,7 @@ Follow these steps to set up the project locally:
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/irshadkhan-dev/Drag-Drop.git
    
 2. Navigate to the project directory:   
    ```bash
@@ -19,7 +19,7 @@ Follow these steps to set up the project locally:
    
 4. Start the development server:
    ```bash
-     Start the development server:
+     pnpm run dev
 ## Technology Choices and Rationale
 
 - **Vite**: Chosen for its blazing-fast development environment and optimized build process.
@@ -38,6 +38,7 @@ Follow these steps to set up the project locally:
 
 ## Future Improvements
 
+- **Improved Drag & Drop functionality**: By using well optimized libraries drag and drop can be more improved
 - **Database Integration**: Connect the project to a database for persistent data storage.
 - **Add Debouncing**: Implement debouncing to optimize performance during high-frequency events, such as drag-and-drop interactions with database calls.
 
