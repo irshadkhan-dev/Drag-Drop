@@ -28,8 +28,8 @@ const TaskInput = ({ setTasks }: { setTasks: React.Dispatch<any> }) => {
   };
 
   return (
-    <div className="flex flex-row space-x-4 items-center p-4">
-      <div className="flex w-96 ">
+    <div className="flex flex-col md:flex-row space-x-4 items-center p-4">
+      <div className="flex w-80">
         <input
           placeholder="Enter your task"
           className=" py-2 px-2 outline-none w-full bg-black text-gray-100 border-2 border-indigo-500 rounded-md"
@@ -39,7 +39,7 @@ const TaskInput = ({ setTasks }: { setTasks: React.Dispatch<any> }) => {
         />
       </div>
 
-      <div className="">
+      <div className="flex space-x-2 items-center max-md:mt-4">
         <select
           name="category"
           value={taskData.category}
@@ -50,14 +50,13 @@ const TaskInput = ({ setTasks }: { setTasks: React.Dispatch<any> }) => {
           <option value="doing">Doing</option>
           <option value="done">Done</option>
         </select>
+        <button
+          className="bg-indigo-500 text-gray-100 rounded-lg p-2 text-center"
+          onClick={handleAddTask}
+        >
+          Add Task
+        </button>
       </div>
-
-      <button
-        className="bg-indigo-500 text-gray-100 rounded-lg p-2 text-center"
-        onClick={handleAddTask}
-      >
-        Add Task
-      </button>
     </div>
   );
 };

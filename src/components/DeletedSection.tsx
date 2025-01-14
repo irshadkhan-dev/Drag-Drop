@@ -31,7 +31,7 @@ const DeletedSections = ({
 }) => {
   return (
     <section
-      className={`w-full px-4 border-[3px] border-dashed overflow-y-scroll no-scrollbar border-slate-600 col-span-full md:col-span-1 p-4 rounded-md h-[50vh] md:h-[70vh]`}
+      className={`w-full px-4 border-[3px] max-md:mb-16 border-dashed overflow-y-scroll no-scrollbar border-slate-600 col-span-full md:col-span-1 p-4 rounded-md h-[50vh] md:h-[70vh]`}
     >
       <div className="flex flex-col space-y-3">
         <div className="">

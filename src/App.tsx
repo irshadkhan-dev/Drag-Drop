@@ -99,12 +99,12 @@ function App() {
   };
 
   return (
-    <div className="w-full h-screen max-w-7xl mx-auto flex flex-col space-y-10">
-      <div className="w-full flex items-center justify-center">
+    <div className="w-full h-screen max-w-7xl mx-auto max-md:px-10 flex flex-col space-y-10">
+      <div className="w-full flex items-center justify-center mt-4">
         <TaskInput setTasks={setTasks} />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-x-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-10">
         <TaskSections
           category="todo"
           title="To-Do"
